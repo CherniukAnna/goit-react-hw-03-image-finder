@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import ReactDOM from 'react-dom';
 import { fetchImages } from './api/api';
 import { Searchbar } from './Searchbar/Searchbar';
 import { Loader } from './Loader/Loader';
@@ -21,7 +22,7 @@ export class App extends Component {
     id: null,
   };
 
-  componentDidUpdate(_, prevState) {
+    componentDidUpdate(_, prevState) {
     console.log(prevState.page);
     console.log(this.state.page);
     const { searchQuery, page } = this.state;
@@ -30,7 +31,7 @@ export class App extends Component {
     }
   }
 
-  getImages = async (query, page) => {
+   getImages = async (query, page) => {
     this.setState({ isLoading: true });
     if (!query) {
       return;
@@ -71,13 +72,15 @@ export class App extends Component {
     });
   };
 
-  openModal = largeImageURL => {
+   openModal = largeImageURL => {
     console.log(largeImageURL);
     this.setState({
       showModal: true,
       largeImageURL: largeImageURL,
     });
   };
+
+
 
   closeModal = () => {
     this.setState({

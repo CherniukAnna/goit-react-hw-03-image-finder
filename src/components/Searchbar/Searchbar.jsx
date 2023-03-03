@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-// import SearchIcon from '@material-ui/icons/Search';
 import { FiSearch } from 'react-icons/fi';
-// import { ImSearch } from 'react-icons/im';
+
 import './Searchbar.css';
 import PropTypes from 'prop-types';
 
@@ -49,5 +48,5 @@ export class Searchbar extends Component {
   }
 }
 Searchbar.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func,
 };
